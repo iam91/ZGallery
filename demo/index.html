@@ -8,9 +8,13 @@
 			body{
 				padding: 2em 5em;
 			}
-			h1, a{
+			*{
 				font-family: "Helvetica Neue",Helvetica,'microsoft yahei ui', 'microsoft yahei','simhei',Arial,sans-serif;
 				color: #5a5a5a;
+			}
+			a{
+				display: inline-block;
+				margin: 0 0.5em 1em 0;
 			}
 			#container{
 				width: 100%;
@@ -24,6 +28,10 @@
 			<a href="#" title="brick">Brick Layout</a>
 			<a href="#" title="waterfall">Waterfall Layout</a>
 			<a href="#" title="jigsaw">Jigsaw Layout</a>
+			<form id="imgsrc" action="">
+				<label>lower speed<input type="radio" name="imgsrc" value="lower" checked="checked"></label>
+				<label>higher speed<input type="radio" name="imgsrc" value="higher"></label>
+			</form>
 		</div>
 		<div id="container"></div>
 		<script type="text/javascript" src="index.js"></script>

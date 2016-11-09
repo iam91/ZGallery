@@ -34,24 +34,26 @@ $del-radius: 0.5em;
 		.info{
 			position: absolute;
 			top: 0;
-			left: 0;
+			right: 0;
 			font-size: 0.6em;
 			padding: 0.5em;
 			margin: 0.5em;
-			width: auto;
-			height: auto;
-			color: transparent;
-			background-color: transparent;
-			border-radius: 1em;
-			transition: box-shadow 0.2s linear;
+			background-color: transparent !important;
+			border-radius: $del-radius;
+			text-align: left;
+			transition: box-shadow 0.2s linear, width 0.3s linear;
+			overflow: hidden;
 			&:hover{
-				background-color: black;
-				color: white;
+				background-color: black !important;
 				opacity: 0.5;
 				box-shadow: $modal-children-shadow;
 			}
 			p{
 				margin: 0;
+				color: transparent !important;
+				&:hover{
+					color: white !important;
+				}
 			}
 		}
 		.del{

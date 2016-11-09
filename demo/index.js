@@ -26,12 +26,16 @@ window.onload = function(e){
 
 	var container = document.querySelector('#container');
 	var choose = document.querySelector('#choose');
-
+	var imgsrc = document.querySelector('#imgsrc');
 
 	var gutter = 5;
 	var gallery = zGallery(container);
 	gallery.setGutter(gutter);
 
+	var srcFn = {
+		lower: fromPlaceholdit, 
+		higher: fromOther
+	};
 
 	choose.onclick = function(e){
 		var layout = zGallery.LAYOUT[e.target.title.toUpperCase()];
@@ -42,8 +46,8 @@ window.onload = function(e){
 			gallery.setLayout(layout);
 			var add = gallery.getLayout() == zGallery.LAYOUT.JIGSAW ? 2 : 20;
 
-			//fromPlaceholdit(urls, add);
-			fromOther(urls, add);
+			var imgsrc = document.querySelector('#imgsrc input[name="imgsrc"]:checked').value;
+			srcFn[imgsrc](urls, add);
 			gallery.setImage(urls);
 		}
 	};
@@ -52,12 +56,13 @@ window.onload = function(e){
 		var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
 		
 		if(window.innerHeight + scrollTop >= document.body.clientHeight){
-			var append = [];
+			var urls = [];
 
 			var add = gallery.getLayout() == zGallery.LAYOUT.JIGSAW ? 1 : 20;
 
-			fromOther(append, add);
-			gallery.addImage(append);
+			var imgsrc = document.querySelector('#imgsrc input[name="imgsrc"]:checked').value;
+			srcFn[imgsrc](urls, add);
+			gallery.addImage(urls);
 		}
 	};
 
