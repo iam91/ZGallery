@@ -1,0 +1,22 @@
+.z-g-waterfall{
+	width: 100%;
+	overflow: hidden;
+	.z-g-waterfall-col{
+		float: left;
+		box-sizing: border-box;
+		overflow: hidden;
+		transition: width 0.5s linear;
+		.wrapper{
+			transition: width 0.5s linear, margin 0.5s linear; 
+			width: 100%;
+			overflow: hidden;
+			img{
+				width: 100%;
+				display: block;
+			}
+		}
+		.wrapper-deleted{
+			width: 0;
+		}
+	}
+}
