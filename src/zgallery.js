@@ -3,6 +3,19 @@
 	'use strict';
 
 	/**
+	 * @typedef ClipCompatible
+	 * @type {Object}
+	 * @property {HTMLElement} svg
+	 * @property {HTMLElement} style
+	 */
+
+	/**
+	 * @typedef BrickRow
+	 * @type {Object}
+	 * @property {number} ratio Height to width ratio of the brick row.
+	 */
+
+	/**
 	 * Util
 	 * @namespace
 	 */
