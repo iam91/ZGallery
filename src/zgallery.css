@@ -166,13 +166,14 @@
   .z-gallery .wrapper .info {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     font-size: 0.6em;
     padding: 0.5em;
     margin: 0.5em;
+    width: auto;
+    height: auto;
     background-color: transparent !important;
     border-radius: 0.5em;
-    text-align: left;
     transition: box-shadow 0.2s linear, width 0.3s linear;
     overflow: hidden; }
     .z-gallery .wrapper .info:hover {
@@ -264,7 +265,6 @@
   width: 100%;
   height: 3em;
   line-height: 3em;
-  position: fixed;
   bottom: 0;
   text-align: center;
   background-color: transparent;
@@ -272,4 +272,4 @@
 
 .loading-show {
   color: white;
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: rgba(0, 0, 0, 0.6); }

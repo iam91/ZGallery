@@ -419,7 +419,7 @@
 		var loadingFlag = document.createElement('div');
 		loadingFlag.classList.add(ClassName.LOADING);
 		loadingFlag.innerHTML = 'LOADING......';
-		document.body.appendChild(loadingFlag);
+		this._g.parentNode.appendChild(loadingFlag);
 		this._loadingFlag = loadingFlag;
 	};
 
